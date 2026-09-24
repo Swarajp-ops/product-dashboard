@@ -3,9 +3,9 @@ A responsive product management dashboard built with React, Vite, Tailwind CSS v
 The project was created for a frontend assignment. It demonstrates authentication, protected routes, product browsing, URL-based state, pagination, search, filters, sorting, product details, and simulated product CRUD actions.
 
 Live Demo
-Live application: Add your Vercel or Netlify URL here
+Live application: product-dashboard-umber-six.vercel.app
 
-GitHub repository: Add your public GitHub repository URL here
+GitHub repository: https://github.com/Swarajp-ops/product-dashboard.git
 
 Tech Stack
 React.js with Vite
