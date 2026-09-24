@@ -1,0 +1,5 @@
+export default function Pagination({ page, total, limit, onPageChange }) {
+  const pages = Math.max(1, Math.ceil(total / limit));
+  const numbers = Array.from({ length: pages }, (_, i) => i + 1).slice(Math.max(0, page - 3), page + 2);
+  return <div className="flex flex-wrap items-center justify-between gap-3 border-t p-4"><span className="text-sm text-slate-500">Showing {total ? (page - 1) * limit + 1 : 0}–{Math.min(page * limit, total)} of {total}</span><div className="flex gap-1"><button disabled={page === 1} onClick={() => onPageChange(page - 1)} className="rounded border px-3 py-2">Previous</button>{numbers.map((n) => <button key={n} onClick={() => onPageChange(n)} className={`rounded border px-3 py-2 ${n === page ? 'bg-indigo-600 text-white' : ''}`}>{n}</button>)}<button disabled={page === pages} onClick={() => onPageChange(page + 1)} className="rounded border px-3 py-2">Next</button></div></div>;
+}
